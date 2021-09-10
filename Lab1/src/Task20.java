@@ -1,12 +1,12 @@
 import java.util.Scanner;
 
 public class Task20 {
-    public static void Execute() {
+    public static void main(String args[]) {
         int initNumber = GetValuesFromUser();
         int changedNumber = ChangeNumber(initNumber);
-        System.out.print("Початкове число -> " + initNumber
-                + " \nЗмінене число -> " + changedNumber
-                + " \nНатуральний логарифм числа -> " + Math.log(changedNumber));
+        System.out.print("The init number -> " + initNumber
+                + " \nThe changed number -> " + changedNumber
+                + " \nNumber`s ln -> " + Math.log(changedNumber));
     }
 
     private static int GetValuesFromUser() {
@@ -14,7 +14,7 @@ public class Task20 {
         Scanner input = new Scanner(System.in);
         while (true) {
             try {
-                System.out.print("Введіть 4-ох значне ціле число -> ");
+                System.out.print("Enter 4-digit integer -> ");
                 tempNumber = Integer.parseInt(input.next());
                 if (!CheckForFourDigit(tempNumber) || tempNumber < 0) {
                     throw new IllegalArgumentException();
@@ -22,12 +22,13 @@ public class Task20 {
                 break;
             }
             catch (NumberFormatException ex) {
-                System.out.println("Введенні данні мають бути числом");
+                System.out.println("Entered data must be number");
             }
             catch (IllegalArgumentException ex) {
-                System.out.println("Введенне число має бути додатнім та 4-ьохзначним");
+                System.out.println("The entered data must be positive and consist of 4 digit");
             }
         }
+        input.close();
         return tempNumber;
     }
 

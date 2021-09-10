@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
 public class Task2 {
-    public static void Execute() {
+    public static void main (String args[]) {
         int initNumber = GetValuesFromUser();
         double root = FindSquareRootOfDigits(initNumber);
-        System.out.printf("Квдратний корінь числа -> %f, Округлений результат - %d", root, Math.round(root));
+        System.out.printf("Square root of number -> %f, Rounded result - %d", root, Math.round(root));
     }
 
     private static int GetValuesFromUser() {
@@ -12,7 +12,7 @@ public class Task2 {
         Scanner input = new Scanner(System.in);
         while (true) {
             try {
-                System.out.print("Введіть 3-ох значне ціле число -> ");
+                System.out.print("Enter three-digit number -> ");
                 tempNumber = Integer.parseInt(input.next());
                 if (!CheckForThreeDigit(tempNumber)) {
                     throw new IllegalArgumentException();
@@ -20,12 +20,13 @@ public class Task2 {
                 break;
             }
             catch (NumberFormatException ex) {
-                System.out.println("Введенні данні мають бути числом");
+                System.out.println("The entered data must be number");
             }
             catch (IllegalArgumentException ex) {
-                System.out.println("Введенне число має бути трьозначним");
+                System.out.println("The entered number must consist of 3 digit");
             }
         }
+        input.close();
         return tempNumber;
     }
 
