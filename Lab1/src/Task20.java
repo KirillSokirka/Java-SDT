@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Task20 {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int initNumber = GetValuesFromUser();
         int changedNumber = ChangeNumber(initNumber);
         System.out.print("The init number -> " + initNumber

@@ -1,3 +1,8 @@
+/*
+    Сформировать массив b, элементами которого являются элементы исходного
+    одномерного массива a, расположенные в обратном порядке.
+*/
+
 import java.util.Arrays;
 import java.util.Random;
 
@@ -18,7 +23,7 @@ public class Task5 {
         return tempArray;
     }
 
-    private static int[] Reverse(int[] array) {
+    public static int[] Reverse(int[] array) {
         int[] tempArray = new int[array.length];
         for (int i = 0; i < tempArray.length; i++) {
             tempArray[i] = array[array.length - 1 - i];

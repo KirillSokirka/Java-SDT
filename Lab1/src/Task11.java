@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Task11 {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int number = GetValueFromUser();
         System.out.println("Factorial of the number " + number + " equals - " + CalculateFactorial(number));
     }

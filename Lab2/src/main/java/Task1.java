@@ -1,3 +1,9 @@
+/*
+    Сформировать одномерный массив b из исходного  одномерного массива a путем циклического
+    сдвига элементов a на k  позиций вправо. Значение k задается как первый аргумент
+    при вызове программы, остальные аргументы – элементы массива.
+*/
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -25,7 +31,7 @@ public class Task1 {
         System.out.print("\nЗмінений масив: " + Arrays.toString(numbers));
     }
 
-    private static int[] Transform(int k, int[] numbers) {
+    public static int[] Transform(int k, int[] numbers) {
         int[] resultNumbers = new int[numbers.length];
         for (int i = 0; i < numbers.length; i++) {
             if (i+k >= resultNumbers.length && i == 0) {

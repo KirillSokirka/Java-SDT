@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Task2 {
-    public static void main (String args[]) {
+    public static void main (String[] args) {
         int initNumber = GetValuesFromUser();
         double root = FindSquareRootOfDigits(initNumber);
         System.out.printf("Square root of number -> %f, Rounded result - %d", root, Math.round(root));

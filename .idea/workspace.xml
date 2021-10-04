@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="10d4c8ff-746d-4ea3-a86e-81f5ca4355b7" name="Changes" comment="" />
+    <list default="true" id="10d4c8ff-746d-4ea3-a86e-81f5ca4355b7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Lab1/src/Task11.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/src/Task11.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/src/Task16.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/src/Task16.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/src/Task2.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/src/Task2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/src/Task20.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/src/Task20.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,6 +76,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RunManager">
@@ -94,6 +101,7 @@
       <option name="presentableId" value="Default" />
       <updated>1631000282553</updated>
       <workItem from="1631000283941" duration="128000" />
+      <workItem from="1633351538838" duration="21000" />
     </task>
     <servers />
   </component>
