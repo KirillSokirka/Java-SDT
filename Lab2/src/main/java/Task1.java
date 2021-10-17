@@ -3,7 +3,6 @@
     сдвига элементов a на k  позиций вправо. Значение k задается как первый аргумент
     при вызове программы, остальные аргументы – элементы массива.
 */
-
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -28,7 +27,7 @@ public class Task1 {
 
         System.out.print("Початковий масив: " + Arrays.toString(numbers));
         int[] resultNumbers = Transform(k, numbers);
-        System.out.print("\nЗмінений масив: " + Arrays.toString(numbers));
+        System.out.print("\nЗмінений масив: " + Arrays.toString(resultNumbers));
     }
 
     public static int[] Transform(int k, int[] numbers) {
