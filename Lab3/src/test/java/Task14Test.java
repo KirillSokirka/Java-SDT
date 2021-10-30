@@ -1,9 +1,5 @@
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
-
 import java.util.Random;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class Task14Test {
