@@ -1,7 +1,8 @@
 import java.util.List;
 import java.util.Objects;
 
-public class Queue {
+public class PeopleQueue {
+
     private List<QueuePerson> _listOfPerson = null;
     private final PersonComparator _personComparator = new PersonComparator();
 
@@ -9,7 +10,7 @@ public class Queue {
         return _listOfPerson;
     }
 
-    Queue (List<QueuePerson> listOfPerson) {
+    PeopleQueue(List<QueuePerson> listOfPerson) {
         _listOfPerson = listOfPerson;
         _listOfPerson.sort(_personComparator);
     }

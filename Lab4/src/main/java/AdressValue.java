@@ -16,6 +16,9 @@ public class AdressValue {
     }
 
     public void set_house(Integer _house) {
+        if (_house < 0) {
+            throw new IllegalArgumentException();
+        }
         this._house = _house;
     }
 

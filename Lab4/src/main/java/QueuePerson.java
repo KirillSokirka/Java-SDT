@@ -8,6 +8,7 @@ public class QueuePerson {
     private String _byFather;
     private int _priority;
     private AdressValue _adressValue;
+
     private final Set<Integer> set_of_Id = new HashSet<>();
 
     public void set_name(String _name) {

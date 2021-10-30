@@ -9,7 +9,7 @@ public class Task20 {
         var listOfPeople = new LinkedList<QueuePerson>();
         listOfPeople.add(petya);
         listOfPeople.add(vasya);
-        var queueForFlat = new Queue(listOfPeople);
+        var queueForFlat = new PeopleQueue(listOfPeople);
         queueForFlat.addToQueue(lena);
         var waiters = queueForFlat.get_listOfPerson();
         for (var p: waiters) {
