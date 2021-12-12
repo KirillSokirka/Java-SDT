@@ -31,4 +31,9 @@ class AbonentTest {
     void get_adress() {
         assertEquals("Adress", abonent.get_adress());
     }
+
+    @Test
+    void compare() {
+        assertEquals(0, abonent.compareTo(abonent));
+    }
 }

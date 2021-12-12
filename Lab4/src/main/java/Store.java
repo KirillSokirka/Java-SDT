@@ -3,7 +3,6 @@ import java.util.Map;
 
 public class Store {
     private final Map<Integer, Article> _store;
-
     public Map<Integer, Article> get_store() {
         return _store;
     }

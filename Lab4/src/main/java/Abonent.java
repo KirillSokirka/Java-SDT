@@ -1,4 +1,4 @@
-public class Abonent {
+public class Abonent implements Comparable<Abonent> {
     private String _name = "";
     private String _surname = "";
     private String _byFather = "";
@@ -15,4 +15,8 @@ public class Abonent {
     String get_surname() { return _surname; }
     String get_byFather() { return _byFather; }
     String get_adress() {return _adress; }
+
+    public int compareTo(Abonent abonent) {
+        return _surname.compareTo(abonent.get_surname());
+    }
 }

@@ -1,5 +1,5 @@
 public class Program {
     public static void main(String[] args) {
-        Task25.Execute();
+        Task10.Execute();
     }
 }
