@@ -48,8 +48,6 @@ public class StartFrame extends Frame {
                 System.exit(0);
             }
         });
-        Choice c = new Choice();
-
 
         add(textArea);
         setSize(330, 400);

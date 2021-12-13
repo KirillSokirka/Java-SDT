@@ -27,7 +27,6 @@ public class ImageForm extends Frame implements ActionListener {
         increaseImage.setBounds(30, 30, 70, 30);
         decreaseImage.setBounds(120, 30, 70, 30);
 
-
         add(increaseImage);
         add(decreaseImage);
 
