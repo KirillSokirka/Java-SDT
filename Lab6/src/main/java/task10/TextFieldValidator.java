@@ -6,14 +6,24 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 
+/**
+ * Class EventHandler for text field of our main form
+ */
 public class TextFieldValidator implements ActionListener {
+
+    /**
+     * Object of StartForm
+     */
     StartForm form;
 
     TextFieldValidator(StartForm form) {
         this.form = form;
-
     }
 
+    /**
+     * Action handler
+     * @param e event
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         if (form.imageTextField.getText().isEmpty()) {
@@ -30,7 +40,12 @@ public class TextFieldValidator implements ActionListener {
         new ImageForm(form);
     }
 
-    private String ValidateFile(String filepath) {
+    /**
+     * Additional function for file validation
+     * @param filepath file path
+     * @return error message
+     */
+    public String ValidateFile(String filepath) {
         var file = new File(filepath);
         if (!file.exists())
             return "Incorrect file path";

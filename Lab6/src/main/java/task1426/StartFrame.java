@@ -25,10 +25,18 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-
+/**
+ * Main frame for task 1426
+ */
 public class StartFrame extends Frame {
 
+    /**
+     * Menubar for changing text characteristics
+     */
     MenuBar menu;
+    /**
+     * Text area for text input
+     */
     TextArea textArea;
 
     StartFrame() {
@@ -56,6 +64,9 @@ public class StartFrame extends Frame {
         setVisible(true);
      }
 
+    /**
+     * Additional method for initialising menubar colors components
+     */
      private void InitializeColorsMenuBar() {
          var colors = new Menu("Colors");
          var black = new MenuItem("black");
@@ -74,7 +85,9 @@ public class StartFrame extends Frame {
          colors.add(green);
          menu.add(colors);
      }
-
+    /**
+     * Method for initialising menubar styles components
+     */
      private void InitializeStylesMenuBar() {
         var styles = new Menu("Styles");
         var bold = new MenuItem("bold");
@@ -97,6 +110,9 @@ public class StartFrame extends Frame {
         menu.add(styles);
      }
 
+    /**
+     * Method for initialising menubar styles components
+     */
      public void InitializeSizesMenuBar() {
          var sizes = new Menu("Sizes");
          var standard = new MenuItem("10px");
@@ -107,7 +123,7 @@ public class StartFrame extends Frame {
          standard.setFont(new Font(null, Font.PLAIN, 10));
          bigger.setFont(new Font(null, Font.PLAIN, 12));
          theBiggest.setFont(new Font(null, Font.PLAIN, 14));
-         custom.setFont(new Font(null, Font.PLAIN, 10));
+         custom.setFont(new Font(null, Font.PLAIN, 12));
          var frame = this;
 
          standard.addActionListener(new SizesEventListener(standard.getFont(), this));

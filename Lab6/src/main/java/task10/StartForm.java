@@ -12,12 +12,27 @@ import java.awt.event.WindowEvent;
 при нажатии второй кнопки – уменьшается на то же количество пикселей.
 */
 
+/**
+ * Main form
+ */
 public class StartForm extends Frame {
 
+    /**
+     * Field for image path
+     */
     TextField imageTextField;
+    /**
+     * Label for error output
+     */
     Label errorValidation;
+    /**
+     * Button for image uploading
+     */
     Button upload;
 
+    /**
+     * Constructor of this class
+     */
     StartForm() {
         imageTextField = new TextField();
         upload = new Button("Upload image");

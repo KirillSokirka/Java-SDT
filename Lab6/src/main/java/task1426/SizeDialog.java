@@ -7,14 +7,36 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.util.regex.Pattern;
 
+/**
+ * Dialog window for user text size input
+ */
 public class SizeDialog implements ActionListener {
 
+    /**
+     * Field for input a size of text
+     */
     TextField sizeField;
+    /**
+     * Button for confirming input
+     */
     Button confirm;
+    /**
+     * Label for error validation
+     */
     Label errorLabel, sizeFieldLabel;
+    /**
+     * The dialog object
+     */
     Dialog sizeDialog;
+    /**
+     * Object to main frame
+     */
     StartFrame frame;
 
+    /**
+     * Constructor
+     * @param frame - main frame object
+     */
     SizeDialog(StartFrame frame) {
         this.frame = frame;
         sizeDialog = new Dialog(this.frame, "Size choosing",true);
@@ -23,7 +45,6 @@ public class SizeDialog implements ActionListener {
         sizeFieldLabel = new Label("Enter a size:");
         sizeField = new TextField();
         confirm = new Button("Confirm");
-
         sizeFieldLabel.setBounds(10, 25, 100, 30);
         sizeField.setBounds(10, 60, 100, 30);
         confirm.setBounds(110, 60, 50, 30);
@@ -45,6 +66,10 @@ public class SizeDialog implements ActionListener {
         sizeDialog.setVisible(true);
     }
 
+    /**
+     * Method for action handling
+     * @param e action sender
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == confirm) {

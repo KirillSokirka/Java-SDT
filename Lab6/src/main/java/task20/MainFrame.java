@@ -24,18 +24,47 @@ import java.util.Map;
 Перед выводом фигуры выполняется проверка, введены ли в текстовых полях все данные и являются ли они целыми числами.
 */
 
+/**
+ * Class for main frame
+ */
 public class MainFrame extends Frame implements ActionListener {
 
-        Choice colors = new Choice(), angles;
+    /**
+     * Choices for colors
+     */
+    Choice colors = new Choice(), angles;
+    /**
+     * Labels for error and input fields for new coordinates
+     */
         Label error, labelForX, labelForY;
-        Button submit;
+    /**
+     * Button for submitting a new coordinates
+     */
+    Button submit;
+    /**
+     * Text fields for new coordinates input
+     */
         TextField textFieldX, textFieldY;
-        int[] x = {0, 100, 300};
-        int[] y = {100, 100, 80};
-        Triangle triangle;
-        Map<String, Color> stringColorDictionary = new HashMap<>();
+    /**
+     * Set of initial values of x
+     */
+    int[] x = {30, 100, 100};
+    /**
+     * Set of initial values of y
+     */
+        int[] y = {100, 100, 100};
+    /**
+     * Object for drawing a triangle
+     */
+    Triangle triangle;
+    /**
+     * Map for choice of color
+     */
+    Map<String, Color> stringColorDictionary = new HashMap<>();
 
-
+    /**
+     * Constructor
+     */
     MainFrame() {
 
             angles = new Choice();
@@ -100,7 +129,11 @@ public class MainFrame extends Frame implements ActionListener {
             setVisible(true);
         }
 
-        @Override
+    /**
+     * Action handler
+     * @param e event
+     */
+    @Override
         public void actionPerformed(ActionEvent e) {
             if (e.getSource() != submit) {
                 return;
@@ -108,8 +141,8 @@ public class MainFrame extends Frame implements ActionListener {
             var color = stringColorDictionary.get(
                     colors.getSelectedItem()
             );
-            var choosedAngel = Integer.parseInt(angles.getSelectedItem());
-            var message = ValidateAngle(choosedAngel);
+            var choosedangle = Integer.parseInt(angles.getSelectedItem());
+            var message = ValidateAngle(choosedangle);
             if (!message.isEmpty()) {
                 error.setText(message);
                 error.setVisible(true);
@@ -121,7 +154,12 @@ public class MainFrame extends Frame implements ActionListener {
             triangle.setBounds(0, 0, 400, 200);
         }
 
-        private String ValidateAngle(int angel) {
+    /**
+     * Method for validating inputed data for angle
+     * @param angle - angle
+     * @return errorMes or empty string
+     */
+        private String ValidateAngle(int angle) {
             var errorMes = ValidateTextFields(textFieldX.getText());
             if (!errorMes.isEmpty()) {
                 return errorMes;
@@ -130,12 +168,17 @@ public class MainFrame extends Frame implements ActionListener {
             if (!errorMes.isEmpty()) {
                 return errorMes;
             }
-            x[angel-1] = Integer.parseInt(textFieldX.getText());
-            y[angel-1] = Integer.parseInt(textFieldY.getText());
+            x[angle-1] = Integer.parseInt(textFieldX.getText());
+            y[angle-1] = Integer.parseInt(textFieldY.getText());
             return "";
         }
 
-        private String ValidateTextFields(String text) {
+    /**
+     * Additional function for data validation from textFeilds
+     * @param text data from textFields
+     * @return error
+     */
+    private String ValidateTextFields(String text) {
             if (text.isEmpty()) {
                 return "Field cannot be empty";
             }
@@ -144,6 +187,8 @@ public class MainFrame extends Frame implements ActionListener {
             } catch (NumberFormatException ex) {
                 return "Invalid format";
             }
+            if (Integer.parseInt(text) < 0 || Integer.parseInt(text) > 300)
+                return "Invalid data";
             return "";
         }
 

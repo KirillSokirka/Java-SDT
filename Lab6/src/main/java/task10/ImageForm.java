@@ -11,13 +11,35 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
+/*
+Form for changing image size
+ */
 public class ImageForm extends Frame implements ActionListener {
+    /*
+     * Buttons for regulating image size
+     */
     Button increaseImage, decreaseImage;
+    /*
+    * Link to main form
+    */
     StartForm startForm;
+    /**
+     * Field for image, that we will draw
+     */
     BufferedImage image;
+    /**
+     * Fields for image height width
+     */
     int imageHeight, imageWidth;
+    /**
+     * Field for graphics 2D object
+     */
     Graphics2D graphics;
 
+    /**
+     * Constructor for ImageForm class
+     * @param form object for Main form
+     */
     ImageForm(StartForm form) {
         startForm = form;
 
@@ -55,6 +77,11 @@ public class ImageForm extends Frame implements ActionListener {
         setVisible(true);
     }
 
+    /**
+     * Overrided method from Component class
+     * Use this method for painting image
+     * @param g Graphics object from base class
+     */
     public void paint(Graphics g) {
         graphics = (Graphics2D)g;
         TexturePaint paint = new TexturePaint(image,
@@ -72,6 +99,10 @@ public class ImageForm extends Frame implements ActionListener {
         setSize(scaledWidth+100, scaledHeight+100);
     }
 
+    /**
+     * Action handler for this form
+     * @param e - event that goes from action sender
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == increaseImage) {
